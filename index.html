@@ -1,792 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Bold Rectangular Grouse</title>
-    <meta property="og:title" content="Bold Rectangular Grouse" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Airborne at the End of the Earth — Nate Gordon</title>
+  <meta name="description" content="In one of the most remote places on earth, missionary pilots fly into rough runways carved by hand out of the sides of mountains..." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    /* ── Tokens ─────────────────────────────────────────── */
+    :root {
+      --cream:    #F7F3EC;
+      --fog:      #E8E2D9;
+      --ink:      #1A1410;
+      --ink-mid:  #3D342C;
+      --ink-soft: #6B5C50;
+      --brass:    #B8924A;
+      --rose:     #C4806B;
+      --max: 1060px;
+    }
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;  -webkit-font-smoothing: antialiased;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;  color: inherit;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}pre {  white-space: normal;}input {  padding: 2px 4px;}img {  display: block;}details {  display: block;  margin: 0;  padding: 0;}summary::-webkit-details-marker {  display: none;}[data-thq="accordion"] [data-thq="accordion-content"] {  max-height: 0;  overflow: hidden;  transition: max-height 0.3s ease-in-out;  padding: 0;}[data-thq="accordion"] details[data-thq="accordion-trigger"][open] + [data-thq="accordion-content"] {  max-height: 1000vh;}details[data-thq="accordion-trigger"][open] summary [data-thq="accordion-icon"] {  transform: rotate(180deg);}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
+    /* ── Reset ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-theme-neutral-dark);
-        background: var(--dl-color-theme-neutral-light);
+    /* ── Utilities ───────────────────────────────────────── */
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
 
-        fill: var(--dl-color-theme-neutral-dark);
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/animate.css@4.1.1/animate.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
-    />
-  </head>
-  <body>
-    <link rel="stylesheet" href="./style.css" />
-    <div>
-      <link href="./index.css" rel="stylesheet" />
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--brass);
+      font-size: .82rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+    .ornament::before, .ornament::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--brass);
+      opacity: .38;
+    }
 
-      <div class="home-container10">
-        <nav>
-          <span class="nav-brand">Nate Gordon</span>
-          <ul class="nav-links">
-            <li>
-              <a href="#praise">
-                <div><span>Praise</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="#about">
-                <div><span>About the Author</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="#bulk">
-                <div><span>Bulk Orders</span></div>
-              </a>
-            </li>
-            <li>
-              <a href="#signed">
-                <div><span>Signed Copies</span></div>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <section class="hero">
-          <div class="hero-text">
-            <p class="hero-eyebrow">A Missionary Aviation Memoir</p>
-            <h1 class="hero-title">Airborne at the End of the Earth</h1>
-            <p class="hero-author">— Nate Gordon —</p>
-            <p class="hero-desc">
-              In one of the most remote places on earth, missionary pilots fly
-              into rough runways carved by hand out of the sides of mountains.
-              The aircraft they fly provide isolated people groups their only
-              access to education, healthcare, markets — and the
-              community-transforming gospel of Jesus Christ.
-            </p>
-            <p class="hero-desc">
-              A twenty-year veteran of flying in Papua, Indonesia, Nate Gordon's
-              front-row-seat stories are a gripping account of God at work in a
-              world rarely seen by outsiders.
-            </p>
-            <div class="btn-row">
-              <a
-                href="https://amzn.to/3csvSsB"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <div target="_blank" rel="noopener" class="btn btn-primary">
-                  <span>Purchase Airborne</span>
-                </div>
-              </a>
-              <a href="#bulk">
-                <div class="btn btn-outline">
-                  <span>Request Bulk Copies</span>
-                </div>
-              </a>
-              <a href="#signed">
-                <div class="btn btn-outline">
-                  <span>Request a Signed Copy</span>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="hero-image">
-            <a
-              href="https://amzn.to/3SmIfPb"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <img
-                src="public/airbornecover-1500h.jpg"
-                alt="image"
-                class="home-image1"
-              />
-            </a>
-          </div>
-        </section>
-        <section id="praise" class="section-pad praise-section">
-          <div class="wrap">
-            <div class="section-head fade-up">
-              <div class="ornament"><span>❧ &nbsp; Praise &nbsp; ❧</span></div>
-              <h2 class="home-thq-section-title-elm1 section-title">
-                <span>Praise for</span>
-                <span>Airborne at the End of the Earth</span>
-              </h2>
-              <p class="section-lead">
-                What readers, leaders, and fellow pilots are saying.
-              </p>
-            </div>
-            <div class="quotes-stack">
-              <div class="quote-card wide fade-up">
-                <div class="quote-mark"><span>"</span></div>
-                <p class="quote-text">
-                  <span>Airborne at the End of the Earth</span>
-                  <span>
-                    is a terrific firsthand account of the professional
-                    airmanship challenges — as well as the emotional and
-                    spiritual ones — that come as a part of the daily job for
-                    hundreds of missionary pilots and their support teams, who
-                    fly in the most challenging environments on earth.
-                  </span>
-                </p>
-                <p class="quote-text">
-                  Make no mistake, this is not just a great read for pilots. It
-                  weaves together compelling aspects of family, culture, faith,
-                  and professional airmanship in a manner that helps the reader
-                  understand the men and women who choose to take up this cross.
-                </p>
-                <span class="quote-attr">
-                  <span>
-                    Dr. Tony Kern — Founder &amp; CEO, Convergent Performance
-                  </span>
-                  <br />
-                  <span>Author of Redefining Airmanship</span>
-                </span>
-              </div>
-              <div class="home-thq-quote-card-elm2 quote-card fade-up">
-                <div class="quote-mark"><span>"</span></div>
-                <p class="quote-text">
-                  This is a book to savor and to share. I couldn't put it down.
-                  Nate shares many amazing, faith-building stories of God's love
-                  working in the hearts and lives of people created in his
-                  image.
-                </p>
-                <span class="quote-attr">
-                  <span>Woody McLendon</span>
-                  <br />
-                  <span>President, JAARS Inc.</span>
-                </span>
-              </div>
-              <div class="home-thq-quote-card-elm3 quote-card fade-up">
-                <div class="quote-mark"><span>"</span></div>
-                <p class="quote-text">
-                  If you've ever wondered what day-to-day life is like as a
-                  missionary pilot, read Nate Gordon's book. Reading this will
-                  make you want to live fully surrendered to whatever mission
-                  God has given you.
-                </p>
-                <span class="quote-attr">
-                  <span>Chris Fabry</span>
-                  <br />
-                  <span>Author and host of Chris Fabry Live, Moody Radio</span>
-                </span>
-              </div>
-              <div class="home-thq-quote-card-elm4 quote-card wide fade-up">
-                <div class="quote-mark"><span>"</span></div>
-                <p class="quote-text">
-                  Having served in Asia for nine years, I grew to love the
-                  people there. As a missionary pilot to Papua for over 20
-                  years, Nate Gordon gives readers both a bird's-eye view and an
-                  on-the-ground account of how the gospel is transforming lives
-                  there.
-                </p>
-                <p class="quote-text">
-                  This powerful inside look at Bible translation in one of the
-                  most remote and linguistically diverse parts of our world is
-                  filled with hope. I pray it will inspire a new generation of
-                  Christians to go all-in to ensure God's Word is available to
-                  everyone, everywhere.
-                </p>
-                <span class="quote-attr">
-                  <span>Dr. John Chesnut</span>
-                  <br />
-                  <span>
-                    President &amp; CEO, Wycliffe Bible Translators USA
-                  </span>
-                </span>
-              </div>
-              <div class="home-thq-quote-card-elm5 quote-card wide fade-up">
-                <div class="quote-mark"><span>"</span></div>
-                <p class="quote-text">
-                  Papua is a land of contrasts. Beautiful pristine jungle gives
-                  way to foreboding mountains and rapidly changing weather
-                  patterns. Isolated tribes living in incredibly remote
-                  conditions are faced with profound physical and spiritual
-                  brokenness, yet there are those who are dedicating their lives
-                  to bring God's Word and the transformative truth found within
-                  it to a people who are deeply loved by Him.
-                </p>
-                <p class="quote-text">
-                  This book will expand your understanding of this very special
-                  part of God's creation and the men and women who are utilizing
-                  unique tools and talents to reach those who have yet to
-                  understand the truth of the gospel.
-                </p>
-                <span class="quote-attr">
-                  <span>David Holsten</span>
-                  <br />
-                  <span>President &amp; CEO, Mission Aviation Fellowship</span>
-                </span>
-              </div>
-              <div class="quote-card fade-up">
-                <div class="quote-mark"><span>"</span></div>
-                <p class="quote-text">
-                  These stories are potent and hope-filled. Nate's words draw
-                  stunning pictures of the wonder experienced by obedient
-                  servants who bring the Word of God to those living in remote
-                  and difficult places.
-                </p>
-                <span class="quote-attr">
-                  <span>Dr. Brent Slater</span>
-                  <br />
-                  <span>
-                    Senior Pastor, Highland Park Baptist Church, Southfield, MI
-                  </span>
-                </span>
-              </div>
-              <div class="home-thq-quote-card-elm7 quote-card fade-up">
-                <div class="quote-mark"><span>"</span></div>
-                <p class="quote-text">
-                  I love the "RFA" — Ready for Anything — attitude portrayed in
-                  many of Nate's stories. I would recommend this book for anyone
-                  going to a mission field.
-                </p>
-                <span class="quote-attr">
-                  <span>Frans Sahureka</span>
-                  <br />
-                  <span>Director, YAJASI Aviation</span>
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section id="about" class="section-pad">
-          <div class="wrap">
-            <div class="section-head fade-up">
-              <div class="ornament">
-                <span>❧ &nbsp; About the Author &nbsp; ❧</span>
-              </div>
-              <h2 class="section-title">
-                <span>Twenty-two years at the</span>
-                <br />
-              </h2>
-            </div>
-          </div>
-          <div class="about-grid fade-up">
-            <div class="about-img">
-              <img
-                src="public/profilepic-400h.jpg"
-                alt="image"
-                class="home-image2"
-              />
-              <div class="about-img-ph"><span>✈</span></div>
-              <span class="about-img-label">Author photo</span>
-            </div>
-            <div class="about-text">
-              <span class="eyebrow">Nate &amp; Sheri Gordon</span>
-              <h2>Filled with adventure, humor, and surprising insights</h2>
-              <p>
-                Nate and Sheri Gordon lived and worked in Papua, Indonesia, for
-                22 years. They served on a team of missionary aviators reaching
-                the most isolated people on the planet.
-              </p>
-              <p>
-                <span>Nate now leads a team at</span>
-                <a
-                  href="https://www.jaars.org/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                ></a>
-              </p>
-              <div target="_blank" rel="noopener">
-                <a
-                  href="https://www.jaars.org/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <span>JAARS</span>
-                </a>
-              </div>
-              <a
-                href="https://www.jaars.org/"
-                target="_blank"
-                rel="noreferrer noopener"
-              ></a>
-              <span>
-                developing software used by mission pilots around the world. The
-                Gordons currently make their home in North Carolina.
-              </span>
-              <p></p>
-              <p>
-                <span>Airborne at the End of the Earth</span>
-                <span>
-                  provides a remarkable view of God fulfilling his promise to
-                  reach every corner of the globe with his love.
-                </span>
-              </p>
-              <div class="btn-row">
-                <a
-                  href="https://amzn.to/3csvSsB"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <div target="_blank" rel="noopener" class="btn btn-primary">
-                    <span>Purchase Airborne</span>
-                  </div>
-                </a>
-                <a
-                  href="https://offthepath.wanderprone.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <div target="_blank" rel="noopener" class="btn btn-outline">
-                    <span>Visit the Blog</span>
-                  </div>
-                </a>
-                <a href="mailto:nate@wanderprone.com?subject=">
-                  <div class="btn btn-outline"><span>Contact Nate</span></div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="section-pad forms-section">
-          <div class="wrap">
-            <div class="section-head fade-up">
-              <div class="ornament"><span>❧ &nbsp; Order &nbsp; ❧</span></div>
-              <h2 class="section-title">Bulk &amp; Signed Copies</h2>
-              <p class="section-lead">
-                Perfect for churches, mission organizations, small groups, and
-                gift giving. All requests go to sales@wanderprone.com.
-              </p>
-            </div>
-            <div class="forms-grid">
-              <div id="bulk" class="form-card fade-up">
-                <span class="eyebrow">For Organizations &amp; Events</span>
-                <h3>
-                  <span>Request Discounted</span>
-                  <br />
-                </h3>
-                <p class="form-subtext">
-                  Tell us about your event, timeline, and shipping destination.
-                </p>
-                <form
-                  method="POST"
-                  action="https://REPLACE_WITH_YOUR_WORKER_SUBDOMAIN.workers.dev/forms/bulk"
-                  data-form-id="c18ed9cb-01df-4c97-8c23-f68a80289b94"
-                >
-                  <div class="field-grid">
-                    <div class="field">
-                      <label for="bulk-name">Name</label>
-                      <input
-                        type="text"
-                        id="bulk-name"
-                        name="true"
-                        autocomplete="name"
-                        required="true"
-                        data-form-field-id="bulk-name"
-                      />
-                    </div>
-                    <div class="field">
-                      <label for="bulk-email">Email</label>
-                      <input
-                        type="email"
-                        id="bulk-email"
-                        name="email"
-                        autocomplete="email"
-                        required="true"
-                        data-form-field-id="bulk-email"
-                      />
-                    </div>
-                    <div class="field">
-                      <label for="bulk-phone">Phone</label>
-                      <input
-                        type="text"
-                        id="bulk-phone"
-                        name="phone"
-                        autocomplete="tel"
-                        data-form-field-id="bulk-phone"
-                      />
-                    </div>
-                    <div class="field">
-                      <label for="bulk-org">Organization</label>
-                      <input
-                        type="text"
-                        id="bulk-org"
-                        name="organization"
-                        autocomplete="organization"
-                        data-form-field-id="bulk-org"
-                      />
-                    </div>
-                    <div class="field">
-                      <label for="bulk-qty">Quantity Estimate</label>
-                      <input
-                        type="number"
-                        id="bulk-qty"
-                        name="quantity"
-                        min="1"
-                        step="1"
-                        data-form-field-id="bulk-qty"
-                      />
-                    </div>
-                    <div class="field full">
-                      <label for="bulk-msg">Message</label>
-                      <textarea
-                        id="bulk-msg"
-                        name="message"
-                        rows="4"
-                        placeholder="Event, timeline, shipping destination…"
-                        data-form-field-id="bulk-msg"
-                      ></textarea>
-                    </div>
-                    <div class="field full">
-                      <div
-                        data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY"
-                        class="cf-turnstile"
-                      ></div>
-                    </div>
-                  </div>
-                  <div class="submit-row">
-                    <button
-                      type="submit"
-                      id="thq_button_IhI8"
-                      name="button"
-                      data-form-field-id="thq_button_IhI8"
-                      class="btn btn-primary"
-                    >
-                      Send Bulk Request
-                    </button>
-                  </div>
-                </form>
-              </div>
-              <div
-                id="signed"
-                class="home-thq-form-card-elm2 form-card fade-up"
-              >
-                <span class="eyebrow">Personalized &amp; Inscribed</span>
-                <h3>
-                  <span>Request a</span>
-                  <br />
-                </h3>
-                <p class="form-subtext">
-                  Include a name and inscription wording and Nate will sign it
-                  personally.
-                </p>
-                <form
-                  method="POST"
-                  action="https://REPLACE_WITH_YOUR_WORKER_SUBDOMAIN.workers.dev/forms/signed"
-                  data-form-id="4d799512-5637-4e2a-92fc-5b036b6a467a"
-                >
-                  <div class="field-grid">
-                    <div class="field">
-                      <label for="sig-name">Name</label>
-                      <input
-                        type="text"
-                        id="sig-name"
-                        name="true"
-                        autocomplete="name"
-                        required="true"
-                        data-form-field-id="sig-name"
-                      />
-                    </div>
-                    <div class="field">
-                      <label for="sig-email">Email</label>
-                      <input
-                        type="email"
-                        id="sig-email"
-                        name="email"
-                        autocomplete="email"
-                        required="true"
-                        data-form-field-id="sig-email"
-                      />
-                    </div>
-                    <div class="field full">
-                      <label for="sig-addr">Shipping Address</label>
-                      <textarea
-                        id="sig-addr"
-                        name="shipping_address"
-                        rows="3"
-                        required="true"
-                        placeholder="Street, City, State, Postal Code, Country"
-                        data-form-field-id="sig-addr"
-                      ></textarea>
-                    </div>
-                    <div class="field full">
-                      <label for="sig-msg">Inscription &amp; Message</label>
-                      <textarea
-                        id="sig-msg"
-                        name="message"
-                        rows="4"
-                        placeholder="Include the name and exact wording for the inscription."
-                        data-form-field-id="sig-msg"
-                      ></textarea>
-                    </div>
-                    <div class="field full">
-                      <div
-                        data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY"
-                        class="cf-turnstile"
-                      ></div>
-                    </div>
-                  </div>
-                  <div class="submit-row">
-                    <button
-                      type="submit"
-                      id="thq_button_R78q"
-                      name="button"
-                      data-form-field-id="thq_button_R78q"
-                      class="btn btn-primary"
-                    >
-                      Send Signed Copy Request
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        <footer>
-          <div class="footer-inner">
-            <span class="footer-brand">Airborne at the End of the Earth</span>
-            <ul class="footer-links">
-              <li>
-                <a
-                  href="https://amzn.to/3csvSsB"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <div target="_blank" rel="noopener">
-                    <span>Purchase</span>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://offthepath.wanderprone.com/"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <div target="_blank" rel="noopener"><span>Blog</span></div>
-                </a>
-              </li>
-              <li>
-                <a href="mailto:nate@wanderprone.com?subject=">
-                  <div><span>Contact</span></div>
-                </a>
-              </li>
-            </ul>
-            <p class="footer-copy">
-              <span>©</span>
-              <span id="year"></span>
-              <span>wanderprone.com</span>
-            </p>
-          </div>
-        </footer>
-        <div class="home-container21">
-          <div class="home-container22">
-            <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                (function(){
-                    document.getElementById("year").textContent = String(new Date().getFullYear());
+    /* ── Nav ─────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(247,243,236,.93);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(184,146,74,.18);
+    }
+    .nav-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink-mid);
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 34px;
+    }
+    .nav-links a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .85rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--brass); }
 
-                    const observer = new IntersectionObserver((entries) => {
-                      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-                    }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
-                    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-                  })()
-              });
-            </script>
-          </div>
-        </div>
-        <div class="home-container23">
-          <div class="home-container24">
-            <style>
-              *, *::before, *::after {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-              }
-              html {
-                scroll-behavior: smooth;
-              }
-              body {
-                background: var(--cream);
-                color: var(--ink);
-                font-family: 'EB Garamond', Georgia, serif;
-                font-size: 18px;
-                line-height: 1.7;
-                -webkit-font-smoothing: antialiased;
-              }
-              img {
-                display: block;
-                max-width: 100%;
-              }
-              a {
-                color: inherit;
-                text-decoration: none;
-              }
-              nav {
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                z-index: 100;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 18px 40px;
-                background: rgba(247,243,236,.93);
-                backdrop-filter: blur(8px);
-                border-bottom: 1px solid rgba(184,146,74,.18);
-              }
-              label {
-                font-family: 'Cormorant Garamond', serif;
-                font-size: .76rem;
-                letter-spacing: .2em;
-                text-transform: uppercase;
-                color: var(--ink-soft);
-              }
-              input, textarea {
-                background: transparent;
-                border: none;
-                border-bottom: 1px solid rgba(26,20,16,.22);
-                padding: 9px 0;
-                color: var(--ink);
-                font-family: 'EB Garamond', serif;
-                font-size: 1rem;
-                outline: none;
-                transition: border-color .2s;
-                width: 100%;
-              }
-              input::placeholder, textarea::placeholder {
-                color: rgba(107,92,80,.4);
-              }
-              input:focus, textarea:focus {
-                border-bottom-color: var(--brass);
-              }
-              textarea {
-                resize: vertical;
-                min-height: 100px;
-              }
-              footer {
-                background: var(--ink);
-                color: rgba(247,243,236,.4);
-                padding: 48px 40px;
-              }
-              @media (max-width: 840px) {
-              nav {
-                padding: 16px 20px;
-              }
-              .nav-links {
-                display: none;
-              }
-              .hero {
-                grid-template-columns: 1fr;
-                min-height: auto;
-              }
-              .hero-image {
-                min-height: 380px;
-              }
-              .hero-text {
-                padding: 56px 20px 36px;
-              }
-              .hero-desc {
-                max-width: none;
-              }
-              .about-grid {
-                grid-template-columns: 1fr;
-              }
-              .about-img {
-                min-height: 260px;
-                order: -1;
-              }
-              .about-text {
-                padding: 40px 24px;
-              }
-              .quotes-stack {
-                grid-template-columns: 1fr;
-              }
-              .quote-card.wide {
-                grid-column: span 1;
-              }
-              .forms-grid {
-                grid-template-columns: 1fr;
-              }
-              .form-card {
-                padding: 40px 24px;
-              }
-              .field-grid {
-                grid-template-columns: 1fr;
-              }
-              .footer-inner {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-              }
-              }
-              @media (prefers-reduced-motion: reduce) {
-              .fade-up {
-                opacity: 1;
-                transform: none;
-                transition: none;
-              }
-              }
-            </style>
-          </div>
-        </div>
-        <a href="https://play.teleporthq.io/signup" class="home-link25">
-          <div aria-label="Sign up to TeleportHQ" class="home-container25">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 19 21"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              class="home-icon1"
-            >
-              <path
-                d="M9.1017 4.64355H2.17867C0.711684 4.64355 -0.477539 5.79975 -0.477539 7.22599V13.9567C-0.477539 15.3829 0.711684 16.5391 2.17867 16.5391H9.1017C10.5687 16.5391 11.7579 15.3829 11.7579 13.9567V7.22599C11.7579 5.79975 10.5687 4.64355 9.1017 4.64355Z"
-                fill="#B23ADE"
-              ></path>
-              <path
-                d="M10.9733 12.7878C14.4208 12.7878 17.2156 10.0706 17.2156 6.71886C17.2156 3.3671 14.4208 0.649963 10.9733 0.649963C7.52573 0.649963 4.73096 3.3671 4.73096 6.71886C4.73096 10.0706 7.52573 12.7878 10.9733 12.7878Z"
-                fill="#FF5C5C"
-              ></path>
-              <path
-                d="M17.7373 13.3654C19.1497 14.1588 19.1497 15.4634 17.7373 16.2493L10.0865 20.5387C8.67402 21.332 7.51855 20.6836 7.51855 19.0968V10.5141C7.51855 8.92916 8.67402 8.2807 10.0865 9.07221L17.7373 13.3654Z"
-                fill="#2874DE"
-              ></path>
-            </svg>
-            <span class="home-text79">Built in TeleportHQ</span>
-          </div>
-        </a>
+    /* ── Buttons ─────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 30px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .88rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      border: 1px solid;
+      transition: background .22s, color .22s;
+      cursor: pointer;
+      background: transparent;
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: var(--cream);
+      border-color: var(--ink);
+    }
+    .btn-primary:hover { background: var(--ink-mid); border-color: var(--ink-mid); }
+    .btn-outline {
+      color: var(--ink);
+      border-color: rgba(26,20,16,.3);
+    }
+    .btn-outline:hover { background: var(--fog); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* ── Hero ────────────────────────────────────────────── */
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding-top: 72px;
+    }
+    .hero-text {
+      padding: 80px 52px 80px 40px;
+    }
+    .hero-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .8rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 20px;
+    }
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 4.5vw, 5rem);
+      font-weight: 300;
+      line-height: 1.06;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .hero-title em { font-style: italic; color: var(--rose); }
+    .hero-author {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 30px;
+    }
+    .hero-desc {
+      font-size: 1.06rem;
+      color: var(--ink-mid);
+      max-width: 52ch;
+      margin-bottom: 14px;
+      line-height: 1.78;
+    }
+    .hero-desc + .hero-desc { margin-bottom: 38px; }
+    .hero-desc em { font-style: italic; }
+
+    .hero-image {
+      background: var(--fog);
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(155deg, rgba(184,146,74,.1), rgba(196,128,107,.1));
+    }
+    .book-cover {
+      position: relative;
+      z-index: 1;
+      width: 230px;
+      aspect-ratio: 2/3;
+      background: var(--ink);
+      box-shadow: 14px 22px 64px rgba(26,20,16,.42), 2px 4px 14px rgba(26,20,16,.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 36px 22px;
+      transform: rotate(-1.5deg);
+    }
+    .book-cover-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .65rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--brass);
+      text-align: center;
+    }
+    .book-cover-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 300;
+      color: var(--cream);
+      text-align: center;
+      line-height: 1.2;
+      letter-spacing: .04em;
+    }
+    .book-cover-title em { color: var(--rose); font-style: italic; }
+    .book-cover-ornament { color: var(--brass); font-size: 1.4rem; opacity: .65; }
+    .book-cover-author {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .7rem;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: rgba(247,243,236,.5);
+    }
+
+    /* ── Section common ──────────────────────────────────── */
+    .section-pad { padding: 96px 0; }
+    .section-head { text-align: center; margin-bottom: 60px; }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      margin-top: 16px;
+      color: var(--ink);
+    }
+    .section-title em { font-style: italic; color: var(--rose); }
+    .section-lead {
+      margin: 16px auto 0;
+      max-width: 58ch;
+      color: var(--ink-soft);
+      font-size: 1.04rem;
+      font-style: italic;
+    }
+
+    /* ── About / Bio ─────────────────────────────────────── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      border-top: 1px solid rgba(184,146,74,.2);
+      border-bottom: 1px solid rgba(184,146,74,.2);
+    }
+    .about-img {
+      background: var(--fog);
+      min-height: 400px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--ink-soft);
+    }
+    .about-img-ph { font-size: 3.5rem; opacity: .18; }
+    .about-img-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      opacity: .35;
+    }
+    .about-text {
+      padding: 60px 52px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .78rem;
+      letter-spacing: .26em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .about-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      color: var(--ink-mid);
+      margin-bottom: 13px;
+      font-size: 1.02rem;
+    }
+    .about-text p a { color: var(--brass); border-bottom: 1px solid rgba(184,146,74,.35); transition: border-color .2s; }
+    .about-text p a:hover { border-color: var(--brass); }
+    .about-text .btn-row { margin-top: 28px; }
+
+    /* ── Praise ──────────────────────────────────────────── */
+    .praise-section { background: var(--ink); color: var(--cream); }
+    .praise-section .section-title { color: var(--cream); }
+    .praise-section .section-lead { color: rgba(247,243,236,.45); }
+    .praise-section .ornament { color: rgba(184,146,74,.6); }
+    .praise-section .ornament::before,
+    .praise-section .ornament::after { background: rgba(184,146,74,.3); }
+
+    .quotes-stack {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(247,243,236,.08);
+      margin-top: 52px;
+    }
+    .quote-card {
+      background: var(--ink);
+      padding: 44px 40px;
+      position: relative;
+    }
+    .quote-card.wide { grid-column: span 2; }
+    .quote-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--brass);
+      opacity: .22;
+      position: absolute;
+      top: 14px;
+      left: 32px;
+    }
+    .quote-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.22rem;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.6;
+      color: rgba(247,243,236,.85);
+      position: relative;
+      z-index: 1;
+      padding-top: 28px;
+      margin-bottom: 20px;
+    }
+    .quote-text + .quote-text { padding-top: 0; margin-top: -8px; }
+    .quote-attr {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .78rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brass);
+      line-height: 1.5;
+    }
+    .quote-attr em { font-style: italic; text-transform: none; letter-spacing: 0; color: rgba(247,243,236,.5); font-size: .9em; }
+
+    /* ── Forms ───────────────────────────────────────────── */
+    .forms-section { background: var(--fog); }
+    .forms-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      background: rgba(184,146,74,.15);
+      margin-top: 52px;
+    }
+    .form-card {
+      background: var(--fog);
+      padding: 52px 44px;
+    }
+    .form-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      font-weight: 400;
+      margin-bottom: 6px;
+    }
+    .form-subtext {
+      font-size: .92rem;
+      color: var(--ink-soft);
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 18px;
+    }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .76rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+    input, textarea {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(26,20,16,.22);
+      padding: 9px 0;
+      color: var(--ink);
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color .2s;
+      width: 100%;
+    }
+    input::placeholder, textarea::placeholder { color: rgba(107,92,80,.4); }
+    input:focus, textarea:focus { border-bottom-color: var(--brass); }
+    textarea { resize: vertical; min-height: 100px; }
+    .submit-row { margin-top: 28px; }
+    .submit-row .btn { width: 100%; }
+    .cf-turnstile { margin-top: 18px; }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      background: var(--ink);
+      color: rgba(247,243,236,.4);
+      padding: 48px 40px;
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .95rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: rgba(247,243,236,.55);
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    .footer-links a {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .78rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(247,243,236,.32);
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--brass); }
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      font-size: .84rem;
+      border-top: 1px solid rgba(247,243,236,.07);
+      padding-top: 26px;
+      margin-top: 8px;
+    }
+
+    /* ── Scroll fade ─────────────────────────────────────── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: none; }
+
+    /* ── Mobile ──────────────────────────────────────────── */
+    @media (max-width: 840px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-image { min-height: 380px; }
+      .hero-text { padding: 56px 20px 36px; }
+      .hero-desc { max-width: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img { min-height: 260px; order: -1; }
+      .about-text { padding: 40px 24px; }
+      .quotes-stack { grid-template-columns: 1fr; }
+      .quote-card.wide { grid-column: span 1; }
+      .forms-grid { grid-template-columns: 1fr; }
+      .form-card { padding: 40px 24px; }
+      .field-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <span class="nav-brand">Nate Gordon</span>
+    <ul class="nav-links">
+      <li><a href="#praise">Praise</a></li>
+      <li><a href="#about">About the Author</a></li>
+      <li><a href="#bulk">Bulk Orders</a></li>
+      <li><a href="#signed">Signed Copies</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">A Missionary Aviation Memoir</p>
+      <h1 class="hero-title"><em>Airborne</em><br>at the End<br>of the Earth</h1>
+      <p class="hero-author">— Nate Gordon —</p>
+      <p class="hero-desc">In one of the most remote places on earth, missionary pilots fly into rough runways carved by hand out of the sides of mountains. The aircraft they fly provide isolated people groups their only access to education, healthcare, markets — and the community-transforming gospel of Jesus Christ.</p>
+      <p class="hero-desc">A twenty-year veteran of flying in Papua, Indonesia, Nate Gordon's front-row-seat stories are a gripping account of God at work in a world rarely seen by outsiders.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://amzn.to/3csvSsB" target="_blank" rel="noopener">Purchase Airborne</a>
+        <a class="btn btn-outline" href="#bulk">Request Bulk Copies</a>
+        <a class="btn btn-outline" href="#signed">Request a Signed Copy</a>
       </div>
-      <link
-        rel="canonical"
-        href="https://bold-rectangular-grouse-5ri9de.teleporthq.site/"
-      />
     </div>
-  </body>
+    <div class="hero-image">
+      <div class="book-cover">
+        <div class="book-cover-eyebrow">A Missionary Aviation Memoir</div>
+        <div class="book-cover-title"><em>Airborne</em> at the End of the Earth</div>
+        <div class="book-cover-ornament">❧</div>
+        <div class="book-cover-author">Nate Gordon</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Praise -->
+  <section id="praise" class="section-pad praise-section">
+    <div class="wrap">
+      <div class="section-head fade-up">
+        <div class="ornament">❧ &nbsp; Praise &nbsp; ❧</div>
+        <h2 class="section-title" style="color:var(--cream)">Praise for <em>Airborne at the End of the Earth</em></h2>
+        <p class="section-lead">What readers, leaders, and fellow pilots are saying.</p>
+      </div>
+      <div class="quotes-stack">
+
+        <div class="quote-card wide fade-up">
+          <div class="quote-mark">"</div>
+          <p class="quote-text"><em>Airborne at the End of the Earth</em> is a terrific firsthand account of the professional airmanship challenges — as well as the emotional and spiritual ones — that come as a part of the daily job for hundreds of missionary pilots and their support teams, who fly in the most challenging environments on earth.</p>
+          <p class="quote-text">Make no mistake, this is not just a great read for pilots. It weaves together compelling aspects of family, culture, faith, and professional airmanship in a manner that helps the reader understand the men and women who choose to take up this cross.</p>
+          <span class="quote-attr">Dr. Tony Kern — Founder &amp; CEO, Convergent Performance<br><em>Author of Redefining Airmanship</em></span>
+        </div>
+
+        <div class="quote-card fade-up" style="transition-delay:.08s">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">This is a book to savor and to share. I couldn't put it down. Nate shares many amazing, faith-building stories of God's love working in the hearts and lives of people created in his image.</p>
+          <span class="quote-attr">Woody McLendon<br><em>President, JAARS Inc.</em></span>
+        </div>
+
+        <div class="quote-card fade-up" style="transition-delay:.16s">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">If you've ever wondered what day-to-day life is like as a missionary pilot, read Nate Gordon's book. Reading this will make you want to live fully surrendered to whatever mission God has given you.</p>
+          <span class="quote-attr">Chris Fabry<br><em>Author and host of Chris Fabry Live, Moody Radio</em></span>
+        </div>
+
+        <div class="quote-card wide fade-up" style="transition-delay:.08s">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">Having served in Asia for nine years, I grew to love the people there. As a missionary pilot to Papua for over 20 years, Nate Gordon gives readers both a bird's-eye view and an on-the-ground account of how the gospel is transforming lives there.</p>
+          <p class="quote-text">This powerful inside look at Bible translation in one of the most remote and linguistically diverse parts of our world is filled with hope. I pray it will inspire a new generation of Christians to go all-in to ensure God's Word is available to everyone, everywhere.</p>
+          <span class="quote-attr">Dr. John Chesnut<br><em>President &amp; CEO, Wycliffe Bible Translators USA</em></span>
+        </div>
+
+        <div class="quote-card wide fade-up" style="transition-delay:.08s">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">Papua is a land of contrasts. Beautiful pristine jungle gives way to foreboding mountains and rapidly changing weather patterns. Isolated tribes living in incredibly remote conditions are faced with profound physical and spiritual brokenness, yet there are those who are dedicating their lives to bring God's Word and the transformative truth found within it to a people who are deeply loved by Him.</p>
+          <p class="quote-text">This book will expand your understanding of this very special part of God's creation and the men and women who are utilizing unique tools and talents to reach those who have yet to understand the truth of the gospel.</p>
+          <span class="quote-attr">David Holsten<br><em>President &amp; CEO, Mission Aviation Fellowship</em></span>
+        </div>
+
+        <div class="quote-card fade-up">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">These stories are potent and hope-filled. Nate's words draw stunning pictures of the wonder experienced by obedient servants who bring the Word of God to those living in remote and difficult places.</p>
+          <span class="quote-attr">Dr. Brent Slater<br><em>Senior Pastor, Highland Park Baptist Church, Southfield, MI</em></span>
+        </div>
+
+        <div class="quote-card fade-up" style="transition-delay:.1s">
+          <div class="quote-mark">"</div>
+          <p class="quote-text">I love the "RFA" — Ready for Anything — attitude portrayed in many of Nate's stories. I would recommend this book for anyone going to a mission field.</p>
+          <span class="quote-attr">Frans Sahureka<br><em>Director, YAJASI Aviation</em></span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About the Author -->
+  <section id="about" class="section-pad">
+    <div class="wrap">
+      <div class="section-head fade-up">
+        <div class="ornament">❧ &nbsp; About the Author &nbsp; ❧</div>
+        <h2 class="section-title">Twenty-two years at the<br>edge of the world</h2>
+      </div>
+    </div>
+    <div class="about-grid fade-up">
+      <div class="about-img">
+        <div class="about-img-ph">✈</div>
+        <span class="about-img-label">Author photo</span>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">Nate &amp; Sheri Gordon</span>
+        <h2>Filled with adventure, humor, and surprising insights</h2>
+        <p>Nate and Sheri Gordon lived and worked in Papua, Indonesia, for 22 years. They served on a team of missionary aviators reaching the most isolated people on the planet.</p>
+        <p>Nate now leads a team at <a href="https://www.jaars.org/" target="_blank" rel="noopener">JAARS</a> developing software used by mission pilots around the world. The Gordons currently make their home in North Carolina.</p>
+        <p><em>Airborne at the End of the Earth</em> provides a remarkable view of God fulfilling his promise to reach every corner of the globe with his love.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://amzn.to/3csvSsB" target="_blank" rel="noopener">Purchase Airborne</a>
+          <a class="btn btn-outline" href="https://offthepath.wanderprone.com/" target="_blank" rel="noopener">Visit the Blog</a>
+          <a class="btn btn-outline" href="mailto:nate@wanderprone.com">Contact Nate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Forms -->
+  <section class="section-pad forms-section">
+    <div class="wrap">
+      <div class="section-head fade-up">
+        <div class="ornament">❧ &nbsp; Order &nbsp; ❧</div>
+        <h2 class="section-title">Bulk &amp; Signed Copies</h2>
+        <p class="section-lead">Perfect for churches, mission organizations, small groups, and gift giving. All requests go to sales@wanderprone.com.</p>
+      </div>
+      <div class="forms-grid">
+
+        <div class="form-card fade-up" id="bulk">
+          <span class="eyebrow">For Organizations &amp; Events</span>
+          <h3>Request Discounted<br>Bulk Copies</h3>
+          <p class="form-subtext">Tell us about your event, timeline, and shipping destination.</p>
+          <form method="POST" action="https://REPLACE_WITH_YOUR_WORKER_SUBDOMAIN.workers.dev/forms/bulk">
+            <div class="field-grid">
+              <div class="field">
+                <label for="bulk-name">Name</label>
+                <input id="bulk-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="bulk-email">Email</label>
+                <input id="bulk-email" type="email" name="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="bulk-phone">Phone</label>
+                <input id="bulk-phone" name="phone" autocomplete="tel" />
+              </div>
+              <div class="field">
+                <label for="bulk-org">Organization</label>
+                <input id="bulk-org" name="organization" autocomplete="organization" />
+              </div>
+              <div class="field">
+                <label for="bulk-qty">Quantity Estimate</label>
+                <input id="bulk-qty" type="number" name="quantity" min="1" step="1" />
+              </div>
+              <div class="field full">
+                <label for="bulk-msg">Message</label>
+                <textarea id="bulk-msg" name="message" rows="4" placeholder="Event, timeline, shipping destination…"></textarea>
+              </div>
+              <div class="field full">
+                <div class="cf-turnstile" data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY"></div>
+              </div>
+            </div>
+            <div class="submit-row">
+              <button class="btn btn-primary" type="submit">Send Bulk Request</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="form-card fade-up" id="signed" style="transition-delay:.1s">
+          <span class="eyebrow">Personalized &amp; Inscribed</span>
+          <h3>Request a<br>Signed Copy</h3>
+          <p class="form-subtext">Include a name and inscription wording and Nate will sign it personally.</p>
+          <form method="POST" action="https://REPLACE_WITH_YOUR_WORKER_SUBDOMAIN.workers.dev/forms/signed">
+            <div class="field-grid">
+              <div class="field">
+                <label for="sig-name">Name</label>
+                <input id="sig-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="sig-email">Email</label>
+                <input id="sig-email" type="email" name="email" autocomplete="email" required />
+              </div>
+              <div class="field full">
+                <label for="sig-addr">Shipping Address</label>
+                <textarea id="sig-addr" name="shipping_address" rows="3" required placeholder="Street, City, State, Postal Code, Country"></textarea>
+              </div>
+              <div class="field full">
+                <label for="sig-msg">Inscription &amp; Message</label>
+                <textarea id="sig-msg" name="message" rows="4" placeholder="Include the name and exact wording for the inscription."></textarea>
+              </div>
+              <div class="field full">
+                <div class="cf-turnstile" data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY"></div>
+              </div>
+            </div>
+            <div class="submit-row">
+              <button class="btn btn-primary" type="submit">Send Signed Copy Request</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-brand">Airborne at the End of the Earth</span>
+      <ul class="footer-links">
+        <li><a href="https://amzn.to/3csvSsB" target="_blank" rel="noopener">Purchase</a></li>
+        <li><a href="https://offthepath.wanderprone.com/" target="_blank" rel="noopener">Blog</a></li>
+        <li><a href="mailto:nate@wanderprone.com">Contact</a></li>
+      </ul>
+      <p class="footer-copy">© <span id="year"></span> wanderprone.com</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
 </html>
