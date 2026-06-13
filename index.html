@@ -169,61 +169,38 @@
     .hero-desc + .hero-desc { margin-bottom: 38px; }
     .hero-desc em { font-style: italic; }
 
-    .hero-image {
-      background: var(--fog);
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-    .hero-image::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(155deg, rgba(184,146,74,.1), rgba(196,128,107,.1));
-    }
-    .book-cover {
-      position: relative;
-      z-index: 1;
-      width: 230px;
-      aspect-ratio: 2/3;
-      background: var(--ink);
-      box-shadow: 14px 22px 64px rgba(26,20,16,.42), 2px 4px 14px rgba(26,20,16,.2);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      padding: 36px 22px;
-      transform: rotate(-1.5deg);
-    }
-    .book-cover-eyebrow {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: .65rem;
-      letter-spacing: .28em;
-      text-transform: uppercase;
-      color: var(--brass);
-      text-align: center;
-    }
-    .book-cover-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.55rem;
-      font-weight: 300;
-      color: var(--cream);
-      text-align: center;
-      line-height: 1.2;
-      letter-spacing: .04em;
-    }
-    .book-cover-title em { color: var(--rose); font-style: italic; }
-    .book-cover-ornament { color: var(--brass); font-size: 1.4rem; opacity: .65; }
-    .book-cover-author {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: .7rem;
-      letter-spacing: .3em;
-      text-transform: uppercase;
-      color: rgba(247,243,236,.5);
-    }
+.hero-image {
+  background: var(--fog);
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px;
+  position: relative;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    155deg,
+    rgba(184,146,74,.95),
+    rgba(196,128,107,.95)
+  );
+}
+
+.hero-book-cover {
+  position: relative;
+  z-index: 1;
+  width: min(420px, 75%);
+  height: auto;
+  border-radius: 4px;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.35),
+    0 10px 30px rgba(0,0,0,.15);
+  transform: rotate(-1.5deg);
+}
 
     /* ── Section common ──────────────────────────────────── */
     .section-pad { padding: 96px 0; }
@@ -520,13 +497,12 @@
       </div>
     </div>
     <div class="hero-image">
-      <div class="book-cover">
-        <div class="book-cover-eyebrow">A Missionary Aviation Memoir</div>
-        <div class="book-cover-title"><em>Airborne</em> at the End of the Earth</div>
-        <div class="book-cover-ornament">❧</div>
-        <div class="book-cover-author">Nate Gordon</div>
-      </div>
-    </div>
+  <img
+    src="airborne-book-cover.jpg"
+    alt="Airborne at the End of the Earth by Nate Gordon"
+    class="hero-book-cover"
+  >
+  </div>
   </section>
 
   <!-- Praise -->
