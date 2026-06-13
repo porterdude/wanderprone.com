@@ -231,7 +231,7 @@
       border-top: 1px solid rgba(184,146,74,.2);
       border-bottom: 1px solid rgba(184,146,74,.2);
     }
-    .about-img {
+    /*.about-img {
       background: var(--fog);
       min-height: 400px;
       position: relative;
@@ -242,6 +242,21 @@
       flex-direction: column;
       gap: 10px;
       color: var(--ink-soft);
+    }*/
+    .about-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .author-photo {
+      width: 100%;
+      max-width: 420px;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow:
+        0 20px 60px rgba(0,0,0,.15),
+        0 6px 20px rgba(0,0,0,.10);
     }
     .about-img-ph { font-size: 3.5rem; opacity: .18; }
     .about-img-label {
@@ -575,8 +590,11 @@
     </div>
     <div class="about-grid fade-up">
       <div class="about-img">
-        <div class="about-img-ph">✈</div>
-        <span class="about-img-label">Author photo</span>
+        <img
+          src="nate-gordon.jpg"
+          alt="Nate Gordon"
+          class="author-photo"
+        >
       </div>
       <div class="about-text">
         <span class="eyebrow">Nate &amp; Sheri Gordon</span>
