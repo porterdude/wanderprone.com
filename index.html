@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" />
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <style>
     /* ── Tokens ─────────────────────────────────────────── */
     :root {
@@ -649,9 +648,6 @@
                 <label for="bulk-msg">Message</label>
                 <textarea id="bulk-msg" name="message" rows="4" placeholder="Event, timeline, shipping destination…"></textarea>
               </div>
-              <div class="field full">
-                <div class="cf-turnstile" data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY"></div>
-              </div>
             </div>
             <div class="submit-row">
               <button class="btn btn-primary" type="submit">Send Bulk Request</button>
@@ -680,9 +676,6 @@
               <div class="field full">
                 <label for="sig-msg">Inscription &amp; Message</label>
                 <textarea id="sig-msg" name="message" rows="4" placeholder="Include the name and exact wording for the inscription."></textarea>
-              </div>
-              <div class="field full">
-                <div class="cf-turnstile" data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY"></div>
               </div>
             </div>
             <br>
